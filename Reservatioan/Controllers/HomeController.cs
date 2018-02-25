@@ -10,6 +10,7 @@ namespace Reservatioan.Controllers
     {
         public ActionResult Index()
         {
+
             return View();
         }
 
@@ -27,4 +28,5 @@ namespace Reservatioan.Controllers
             return View();
         }
     }
+
 }
