@@ -15,8 +15,8 @@ namespace Reservatioan.Controllers
             var t = GetSheduleShift();
             var ee = from p in t.AsEnumerable()
                 select p;
-            return Content(t.Rows[4][0].ToString());
-           // return View();
+
+            return View();
         }
 
         public ActionResult About()
