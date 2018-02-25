@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
+using System.Dynamic;
+using Reservatioan.Models;
 
 namespace Reservatioan.Controllers
 {
@@ -18,16 +20,25 @@ namespace Reservatioan.Controllers
         public ActionResult Index()
         {
             person_id = 34647;
-            dateNow = "1396/11/03";
-            shift = 2;
+            dateNow = "1396/11/01";
+            shift = 3;
+            
+            List<datee> naharDate =( from p in GetSheduleShift().AsEnumerable()
+                     where p.Field<string>("Date").CompareTo(dateNow) == 1 & p.Field<string>("Nahar") == shift.ToString()
+                     select new datee { date = p.Field<string>("Date"), meal = "nahar" }).ToList();
+            List<datee> shamDate =( from p in GetSheduleShift().AsEnumerable()
+                      where p.Field<string>("Date").CompareTo(dateNow) == 1 & p.Field<string>("Sham") == shift.ToString()
+                      select new datee { date = p.Field<string>("Date"), meal = "sham" }).ToList();
 
-            var ee = from p in GetSheduleShift().AsEnumerable()
-                where p.Field<string>("Date").CompareTo(dateNow)==1 & p.Field<string>("Nahar")==shift.ToString()
-                     select p;
-     
-            int x = 5;
+            var date = naharDate.Concat(shamDate).OrderBy(p => p.date).ToList();
 
-            return View();
+
+
+            var ttt = date.ElementAt(1);
+
+            
+
+            return View(ttt);
         }
 
         public ActionResult About()
@@ -98,6 +109,13 @@ namespace Reservatioan.Controllers
             table.Rows.Add("20686", "3");
             table.Rows.Add("19051", "4");
             return table;
+        }
+
+        class myfff
+        {
+           
+            public string date { get; set; }
+            public string meal { get; set; }
         }
 
     }
