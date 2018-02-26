@@ -38,7 +38,7 @@ namespace Reservatioan.Controllers
 
             
 
-            return View(ttt);
+            return View(date);
         }
 
         public ActionResult About()
