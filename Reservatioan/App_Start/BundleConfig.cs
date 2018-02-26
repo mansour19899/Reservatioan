@@ -27,7 +27,7 @@ namespace Reservatioan
                       "~/Content/bootstrap.min.css",
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap.rtl.css",
-                      "~/Content/site.css"));
+                      "~/Content/Site.css"));
         }
     }
 }

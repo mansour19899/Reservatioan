@@ -21,7 +21,7 @@ namespace Reservatioan.Controllers
         {
             person_id = 34647;
             dateNow = "1396/11/01";
-            shift = 3;
+            shift = 2;
             
             List<datee> naharDate =( from p in GetSheduleShift().AsEnumerable()
                      where p.Field<string>("Date").CompareTo(dateNow) == 1 & p.Field<string>("Nahar") == shift.ToString()

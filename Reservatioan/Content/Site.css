@@ -23,7 +23,11 @@ textarea {
     max-width: 280px;
 }
 
-.themeDay {
-    background-color: red;
+.themeLunch {
+    background-color: whitesmoke;
 }
+.themeDinner {
+    background-color: navy;
+}
+
 
