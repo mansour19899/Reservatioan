@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using System.Dynamic;
+using  System.Web.SessionState;
 using Reservatioan.Models;
 
 namespace Reservatioan.Controllers
@@ -22,6 +23,8 @@ namespace Reservatioan.Controllers
             person_id = 34647;
             dateNow = "1396/11/01";
             shift = 2;
+            User user = new User() { PersonId = person_id,Shift = shift,Restuarent = "رستوران یک"};
+            TempData["user"] = user;
             
             List<datee> naharDate =( from p in GetSheduleShift().AsEnumerable()
                      where p.Field<string>("Date").CompareTo(dateNow) == 1 & p.Field<string>("Nahar") == shift.ToString()
@@ -41,6 +44,12 @@ namespace Reservatioan.Controllers
             return View(date);
         }
 
+        public ActionResult ReservePerDay(string date)
+        {
+            
+           
+            return Content(date);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

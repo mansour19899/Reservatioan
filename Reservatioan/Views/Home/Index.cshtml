@@ -1,12 +1,8 @@
 ﻿@model IEnumerable<Reservatioan.Models.datee>
 
-    @{
-        ViewBag.Title = "Home Page";
-    }
 
     <div>
-     
-           
+
             <table class="table" style="margin-top: 30px;" >
                 <tbody>
                 @{
@@ -46,18 +42,19 @@
                             }
 
                             <div class="row @whichMeal1" style="padding: 30px;">
-                                <a href="http://www.google.com">
+                                <a href="../Home/ReservePerDay?date=@Model.ElementAt(j).date">
                                     <div class="col-md-8">
                                         <p>@Model.ElementAt(j).date</p>
-                                        <p>رستوران یک</p></div>
-                                    <div class="col-md-4"><span > <img src="~/Resources/Spoon.png" style="width: 60px; height: 60px;"/></span></div>
+                                        <p>رستوران یک</p>
+                                    </div>
+                                    <div class="col-md-4"><span> <img src="~/Resources/Spoon.png" style="width: 60px; height: 60px;" /></span></div>
                                 </a>
                             </div>
 
 
                         </td>
                         <td style="padding: 30px">
-                            <a href="../Shared/_Layout.cshtml">
+                            <a href="../Home/ReservePerDay?date=@Model.ElementAt(j+1).date">
                                 <div class="row @whichMeal2" style=" padding: 30px; ">
                                     <div class="col-md-8"><p>@Model.ElementAt(j+1).date</p><p>رستوران یک</p></div>
                                     <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
@@ -67,9 +64,9 @@
                             </a>
                         </td>
                         <td style="padding: 30px">
-                            <a href="../Shared/_Layout.cshtml">
+                            <a href="../Home/ReservePerDay?date=@Model.ElementAt(j+2).date">
                                 <div class="row @whichMeal3" style=" padding: 30px; ">
-                                    <div class="col-md-8"><p>@Model.ElementAt(j+ 2).date</p><p>رستوران یک</p></div>
+                                    <div class="col-md-8"><p>@Model.ElementAt(j + 2).date</p><p>رستوران یک</p></div>
                                     <div class="col-md-4"><span> <img src="~/Resources/Spoon.png" style="width: 60px; height: 60px;" /></span></div>
 
                                 </div>
