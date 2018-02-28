@@ -2,7 +2,7 @@
 
 
     <div>
-
+        
             <table class="table" style="margin-top: 30px;" >
                 <tbody>
                 @{
@@ -80,20 +80,62 @@
                     </tr>
                     j++;
                 }
-                
-               
-               } 
+                @if (Model.Count()%3 != 0)
+                {
+                    <tr>
+                       @if (Model.Count() % 3 ==2 )
+                       {
+                           <td style="padding: 30px">
+                               <a href="../Home/ReservePerDay?date=@Model.Reverse().ElementAt(2).date&meal=@Model.Reverse().ElementAt(2).meal">
+                                   <div class="row " style=" padding: 30px; ">
+                                       <div class="col-md-8"><p>@Model.Reverse().ElementAt(2).date</p><p>رستوران یک</p></div>
+                                       <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
+
+                                   </div>
+       
+                               </a>
+                           </td>
+                           <td style="padding: 30px">
+                               <a href="../Home/ReservePerDay?date=@Model.Reverse().First().date&meal=@Model.First().meal">
+                                   <div class="row " style=" padding: 30px; ">
+                                       <div class="col-md-8"><p>@Model.Reverse().First().date</p><p>رستوران یک</p></div>
+                                       <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
+
+                                   </div>
+       
+                               </a>
+                           </td>
+
+                       }
+                        @if (Model.Count() % 3 == 1)
+                        {
+                            <td style="padding: 30px">
+                                <a href="../Home/ReservePerDay?date=@Model.Last().date&meal=@Model.Last().meal">
+                                    <div class="row " style=" padding: 30px; ">
+                                        <div class="col-md-8"><p>@Model.Last().date</p><p>رستوران یک</p></div>
+                                        <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
+
+                                    </div>
+       
+                                </a>
+                            </td>
+                        }
+                    </tr>
+              
+                }
+                    
+                } 
                
            
 
                 </tbody>
             </table>
-            
+
 
         </div>
 
-        
-       
+
+
         <h6> @Model.Count()</h6>
        
       

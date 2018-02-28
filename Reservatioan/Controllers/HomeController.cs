@@ -26,7 +26,7 @@ namespace Reservatioan.Controllers
         {
             person_id = 34647;
             dateNow = "1396/11/01";
-            shift = 2;
+            shift = 4;
             User user = new User() { PersonId = person_id,Shift = shift,Restuarent = "رستوران یک",Restuarent_fk_id = 26,Name = "سید منصور محمدی"};
             Session["user"] = user;
             
