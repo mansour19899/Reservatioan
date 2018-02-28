@@ -13,10 +13,10 @@ namespace Reservatioan.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PoonehEntities : DbContext
+    public partial class PoonehEntities4 : DbContext
     {
-        public PoonehEntities()
-            : base("name=PoonehEntities")
+        public PoonehEntities4()
+            : base("name=PoonehEntities4")
         {
         }
     

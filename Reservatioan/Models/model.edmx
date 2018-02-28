@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PoonehModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PoonehModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Card">
           <Key>
             <PropertyRef Name="Id" />
@@ -3109,8 +3109,7 @@ warning 6002: The table/view 'Pooneh.dbo.ScheduleShift' does not have a primary 
             <End Role="WebUser_Page" EntitySet="WebUser_Page" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PoonehModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -5857,7 +5856,7 @@ warning 6002: The table/view 'Pooneh.dbo.ScheduleShift' does not have a primary 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PoonehEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PoonehEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cards" EntityType="Self.Card" />
           <EntitySet Name="Companies" EntityType="Self.Company" />
           <EntitySet Name="Contractors" EntityType="Self.Contractor" />
@@ -6433,7 +6432,7 @@ warning 6002: The table/view 'Pooneh.dbo.ScheduleShift' does not have a primary 
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PoonehModelStoreContainer" CdmEntityContainer="PoonehEntities">
+        <EntityContainerMapping StorageEntityContainer="PoonehModelStoreContainer" CdmEntityContainer="PoonehEntities4">
           <EntitySetMapping Name="Cards">
             <EntityTypeMapping TypeName="PoonehModel.Card">
               <MappingFragment StoreEntitySet="Card">

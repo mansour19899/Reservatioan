@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="caf15ef6def04e5187b68173cb1bf651" Name="Diagram1">
+      <Diagram DiagramId="6d0b79f10cc941ef998fc388455daf4b" Name="Diagram1" ZoomLevel="64">
         <EntityTypeShape EntityType="PoonehModel.Card" Width="1.5" PointX="3.75" PointY="46.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PoonehModel.Company" Width="1.5" PointX="0.75" PointY="60.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PoonehModel.Contractor" Width="1.5" PointX="22.5" PointY="63.375" IsExpanded="true" />

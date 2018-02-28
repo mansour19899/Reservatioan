@@ -47,10 +47,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -155,276 +155,278 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Card.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Company.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Contractor.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CookOrder.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CookOrderType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DailyMinute.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DailyMinuteDocument.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DailyMinuteItem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\datee.cs" />
     <Compile Include="Models\EmploymentType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EntireCost.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EntireCostPerCompany.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Enums\Meal.cs" />
+    <Compile Include="Models\Enums\ShiftStatus.cs" />
     <Compile Include="Models\ExtraTime.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Faal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Faal_Temp.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Food.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FoodType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Food_Material.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Guest.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GuestCard.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GuestGeneral.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GuestType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HelpDesk.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HelpDeskCategory.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HoliDay.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentifyInfo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Kiosk.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KioskApp.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KioskMessage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KioskPass.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KioskRestartTime.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\KioskTimeSetter.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Material.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MaterialType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Meal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MeasurementUnit.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MidNight.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MidNightUnit.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Context.cs">
+    <Compile Include="Models\model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.cs">
+    <Compile Include="Models\model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
+    <Compile Include="Models\model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\PageContent.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Person.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PersonType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Person_IdentifyInfo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Person_IdentifyInfo_Bup.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Person_IdentifyInfo_temp.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Person_Meal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Person_Restaurant.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Person_Restaurant_1395_03.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PoonehForm.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PoonehReservation.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PoonehUser.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PoonehUser_Form.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PoonehWebPage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PoonehWebUser.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PRTemp.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ReservationDayCount.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Restaurant.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RestaurantContractor.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RestaurantDailyMinute.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Res_Cont_Contract.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Res_Cont_ContractItem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Res_Cont_Contract_Restaurant.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Schedule.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Schedule13951005.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ScheduleShift.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Sex.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShiftDate.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Stack.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\StackDocument.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\StackDocumentType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\StackStock.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Status.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SupplierStatu.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TakeAway.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TakeAwayDetail.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TakeAwayDocument.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Technician.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\test.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Tray.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TrayItem.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Unit.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UnitCard.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UsedService.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\VIPServed.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\WebUser_Page.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\WorkSheet.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -436,15 +438,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>model.edmx</DependentUpon>
+      <LastGenOutput>model.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>model.edmx</DependentUpon>
+      <LastGenOutput>model.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\Spoon.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -452,12 +454,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Models\model.edmx.diagram">
+      <DependentUpon>model.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

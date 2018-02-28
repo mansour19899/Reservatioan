@@ -26,23 +26,23 @@
                           whichMeal3 = "themeLunch";
                       }
 
-                            @if (Model.ElementAt(j).meal.Equals("sham"))
+                            @if (Model.ElementAt(j).meal==2)
                             {
                                 whichMeal1 = "themeDinner";
                             }
 
-                            @if (Model.ElementAt(j + 1).meal.Equals("sham"))
+                            @if (Model.ElementAt(j + 1).meal==2)
                             {
                                 whichMeal2 = "themeDinner";
                             }
 
-                            @if (Model.ElementAt(j + 2).meal.Equals("sham"))
+                            @if (Model.ElementAt(j + 2).meal==2)
                             {
                                 whichMeal3 = "themeDinner";
                             }
 
                             <div class="row @whichMeal1" style="padding: 30px;">
-                                <a href="../Home/ReservePerDay?date=@Model.ElementAt(j).date">
+                                <a href="../Home/ReservePerDay?date=@Model.ElementAt(j).date&meal=@Model.ElementAt(j).meal">
                                     <div class="col-md-8">
                                         <p>@Model.ElementAt(j).date</p>
                                         <p>رستوران یک</p>
@@ -54,7 +54,7 @@
 
                         </td>
                         <td style="padding: 30px">
-                            <a href="../Home/ReservePerDay?date=@Model.ElementAt(j+1).date">
+                            <a href="../Home/ReservePerDay?date=@Model.ElementAt(j+1).date&meal=@Model.ElementAt(j+1).meal">
                                 <div class="row @whichMeal2" style=" padding: 30px; ">
                                     <div class="col-md-8"><p>@Model.ElementAt(j+1).date</p><p>رستوران یک</p></div>
                                     <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
@@ -64,7 +64,7 @@
                             </a>
                         </td>
                         <td style="padding: 30px">
-                            <a href="../Home/ReservePerDay?date=@Model.ElementAt(j+2).date">
+                            <a href="../Home/ReservePerDay?date=@Model.ElementAt(j+2).date&meal=@Model.ElementAt(j+2).meal">
                                 <div class="row @whichMeal3" style=" padding: 30px; ">
                                     <div class="col-md-8"><p>@Model.ElementAt(j + 2).date</p><p>رستوران یک</p></div>
                                     <div class="col-md-4"><span> <img src="~/Resources/Spoon.png" style="width: 60px; height: 60px;" /></span></div>

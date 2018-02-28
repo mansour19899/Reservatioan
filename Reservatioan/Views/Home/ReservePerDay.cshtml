@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Reservatioan.Models.Tray>  
 @{
     ViewBag.Title = "ReservePerDay";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,3 +6,7 @@
 
 <h2>ReservePerDay</h2>
 
+@foreach (var item in Model)
+{
+    <h1>@item.Name</h1>
+}

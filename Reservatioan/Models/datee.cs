@@ -8,6 +8,6 @@ namespace Reservatioan.Models
     public class datee
     {
         public string date { get; set; }
-        public string meal { get; set; }
+        public int meal { get; set; }
     }
 }
