@@ -20,7 +20,7 @@
                  
                     <tr>
                         <td style="padding: 30px;">
-                      @{
+                      @*@{
                           whichMeal1= "themeLunch";
                           whichMeal2 = "themeLunch";
                           whichMeal3 = "themeLunch";
@@ -39,9 +39,9 @@
                             @if (Model.ElementAt(j + 2).meal==2)
                             {
                                 whichMeal3 = "themeDinner";
-                            }
+                            }*@
 
-                            <div class="row @whichMeal1" style="padding: 30px;">
+                            <div class="row @Model.ElementAt(j).theme" style="padding: 30px;">
                                 <a href="../Home/ReservePerDay?date=@Model.ElementAt(j).date&meal=@Model.ElementAt(j).meal">
                                     <div class="col-md-8">
                                         <p>@Model.ElementAt(j).date</p>
@@ -55,7 +55,7 @@
                         </td>
                         <td style="padding: 30px">
                             <a href="../Home/ReservePerDay?date=@Model.ElementAt(j+1).date&meal=@Model.ElementAt(j+1).meal">
-                                <div class="row @whichMeal2" style=" padding: 30px; ">
+                                <div class="row @Model.ElementAt(j+1).theme" style=" padding: 30px; ">
                                     <div class="col-md-8"><p>@Model.ElementAt(j+1).date</p><p>رستوران یک</p></div>
                                     <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
 
@@ -65,7 +65,7 @@
                         </td>
                         <td style="padding: 30px">
                             <a href="../Home/ReservePerDay?date=@Model.ElementAt(j+2).date&meal=@Model.ElementAt(j+2).meal">
-                                <div class="row @whichMeal3" style=" padding: 30px; ">
+                                <div class="row  @Model.ElementAt(j+2).theme" style=" padding: 30px; ">
                                     <div class="col-md-8"><p>@Model.ElementAt(j + 2).date</p><p>رستوران یک</p></div>
                                     <div class="col-md-4"><span> <img src="~/Resources/Spoon.png" style="width: 60px; height: 60px;" /></span></div>
 
@@ -86,9 +86,9 @@
                        @if (Model.Count() % 3 ==2 )
                        {
                            <td style="padding: 30px">
-                               <a href="../Home/ReservePerDay?date=@Model.Reverse().ElementAt(2).date&meal=@Model.Reverse().ElementAt(2).meal">
-                                   <div class="row " style=" padding: 30px; ">
-                                       <div class="col-md-8"><p>@Model.Reverse().ElementAt(2).date</p><p>رستوران یک</p></div>
+                               <a href="../Home/ReservePerDay?date=@Model.Reverse().ElementAt(1).date&meal=@Model.Reverse().ElementAt(1).meal">
+                                   <div class="row @Model.Reverse().ElementAt(1).theme" style=" padding: 30px; ">
+                                       <div class="col-md-8"><p>@Model.Reverse().ElementAt(1).date</p><p>رستوران یک</p></div>
                                        <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
 
                                    </div>
@@ -96,8 +96,8 @@
                                </a>
                            </td>
                            <td style="padding: 30px">
-                               <a href="../Home/ReservePerDay?date=@Model.Reverse().First().date&meal=@Model.First().meal">
-                                   <div class="row " style=" padding: 30px; ">
+                               <a href="../Home/ReservePerDay?date=@Model.Reverse().First().date&meal=@Model.Reverse().First().meal">
+                                   <div class="row @Model.Reverse().First().theme " style=" padding: 30px; ">
                                        <div class="col-md-8"><p>@Model.Reverse().First().date</p><p>رستوران یک</p></div>
                                        <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
 
@@ -111,7 +111,7 @@
                         {
                             <td style="padding: 30px">
                                 <a href="../Home/ReservePerDay?date=@Model.Last().date&meal=@Model.Last().meal">
-                                    <div class="row " style=" padding: 30px; ">
+                                    <div class="row @Model.Last().theme " style=" padding: 30px; ">
                                         <div class="col-md-8"><p>@Model.Last().date</p><p>رستوران یک</p></div>
                                         <div class="col-md-4"><span > <img src="~/Resources/Spoon.png"  style="width: 60px; height: 60px;"/></span></div>
 

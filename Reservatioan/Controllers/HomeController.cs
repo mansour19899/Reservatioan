@@ -25,17 +25,19 @@ namespace Reservatioan.Controllers
         public ActionResult Index()
         {
             person_id = 34647;
-            dateNow = "1396/11/01";
+            dateNow = "1396/11/11";
             shift = 4;
             User user = new User() { PersonId = person_id,Shift = shift,Restuarent = "رستوران یک",Restuarent_fk_id = 26,Name = "سید منصور محمدی"};
             Session["user"] = user;
             
+            Session["permit"] = true;
+            
             List<datee> naharDate =( from p in GetSheduleShift().AsEnumerable()
                      where p.Field<string>("Date").CompareTo(dateNow) == 1 & p.Field<string>("Nahar") == shift.ToString()
-                     select new datee { date = p.Field<string>("Date"), meal = (int)MealEnum.ناهار }).ToList();
+                     select new datee { date = p.Field<string>("Date"), meal = (int)MealEnum.ناهار ,theme = "themeLunch" }).ToList();
             List<datee> shamDate =( from p in GetSheduleShift().AsEnumerable()
                       where p.Field<string>("Date").CompareTo(dateNow) == 1 & p.Field<string>("Sham") == shift.ToString()
-                      select new datee { date = p.Field<string>("Date"), meal = (int)MealEnum.شام }).ToList();
+                      select new datee { date = p.Field<string>("Date"), meal = (int)MealEnum.شام ,theme = "themeDinner" }).ToList();
 
             var date = naharDate.Concat(shamDate).OrderBy(p => p.date).ToList();
 
@@ -50,24 +52,34 @@ namespace Reservatioan.Controllers
         [HandleError]
         public ActionResult ReservePerDay(string date,int meal)
         {
-            var db = new PoonehEntities4();
+            var y =(bool) Session["permit"];
+            Session["permit"] = false;
+            if (y)
+            {
+                var db = new PoonehEntities4();
 
-            var q = Session["user"] as User;
+                var q = Session["user"] as User;
 
-            var trayIds =( from p in db.Schedules
-                          where p.SDate.Equals(date) & p.Restaurant_Id_Fk == q.Restuarent_fk_id
-                                                      & p.Meal_Id_Fk == meal
-                          select new { p.Tray_Id_Fk }).ToList();
-            int t =(int) trayIds.ElementAt(0).Tray_Id_Fk;
-            int tt = (int)trayIds.ElementAt(1).Tray_Id_Fk;
-            int ttt = (int)trayIds.ElementAt(2).Tray_Id_Fk;
-             List<Tray> qq = (from qqq in db.Trays
-                where qqq.Id == t||qqq.Id==tt || qqq.Id == ttt
-                      select qqq).ToList();
+                var trayIds = (from p in db.Schedules
+                    where p.SDate.Equals(date) & p.Restaurant_Id_Fk == q.Restuarent_fk_id
+                                               & p.Meal_Id_Fk == meal
+                    select new { p.Tray_Id_Fk }).ToList();
+                int t = (int)trayIds.ElementAt(0).Tray_Id_Fk;
+                int tt = (int)trayIds.ElementAt(1).Tray_Id_Fk;
+                int ttt = (int)trayIds.ElementAt(2).Tray_Id_Fk;
+                List<Tray> qq = (from qqq in db.Trays
+                    where qqq.Id == t || qqq.Id == tt || qqq.Id == ttt
+                    select qqq).ToList();
 
-           // MemoryStream ms = new MemoryStream(tt);
-
-            return View(qq);
+                
+                
+                return View(qq);
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+        
         }
         public ActionResult About()
         {
