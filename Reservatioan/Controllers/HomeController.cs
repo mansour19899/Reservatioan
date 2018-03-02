@@ -49,6 +49,16 @@ namespace Reservatioan.Controllers
 
             return View(date);
         }
+
+        public ActionResult ReserveAllDay()
+        {
+            var user = Session["user"] as User;
+            dateNow = "1396/11/11";
+            List<datee> Date = (from p in GetSheduleShift().AsEnumerable()
+                where p.Field<string>("Date").CompareTo(dateNow) == 1
+                select new datee { date = p.Field<string>("Date")}).ToList();
+            return View(Date);
+        }
         [HandleError]
         public ActionResult ReservePerDay(string date,int meal)
         {
@@ -151,12 +161,12 @@ namespace Reservatioan.Controllers
             return table;
         }
 
-        class myfff
-        {
+        //class myfff
+        //{
            
-            public string date { get; set; }
-            public string meal { get; set; }
-        }
+        //    public string date { get; set; }
+        //    public string meal { get; set; }
+        //}
 
     }
 }

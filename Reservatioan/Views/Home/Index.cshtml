@@ -7,9 +7,7 @@
                 <tbody>
                 @{
                     int j = 0;
-                    string whichMeal1;
-                    string whichMeal2;
-                    string whichMeal3;
+         
                 }
 
                 @for (int i = 0 ; i < Model.Count()/3; i++)
@@ -20,26 +18,7 @@
                  
                     <tr>
                         <td style="padding: 30px;">
-                      @*@{
-                          whichMeal1= "themeLunch";
-                          whichMeal2 = "themeLunch";
-                          whichMeal3 = "themeLunch";
-                      }
-
-                            @if (Model.ElementAt(j).meal==2)
-                            {
-                                whichMeal1 = "themeDinner";
-                            }
-
-                            @if (Model.ElementAt(j + 1).meal==2)
-                            {
-                                whichMeal2 = "themeDinner";
-                            }
-
-                            @if (Model.ElementAt(j + 2).meal==2)
-                            {
-                                whichMeal3 = "themeDinner";
-                            }*@
+                
 
                             <div class="row @Model.ElementAt(j).theme" style="padding: 30px;">
                                 <a href="../Home/ReservePerDay?date=@Model.ElementAt(j).date&meal=@Model.ElementAt(j).meal">
@@ -125,12 +104,22 @@
                 }
                     
                 } 
-               
-           
+   
 
                 </tbody>
             </table>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <a href="../Home/ReserveAllDay">
+                    <div class="row  themeLunch" style=" padding: 30px; ">
+                        <div class="col-md-8"><p>رزروهای تاریخ های غیر شیفت</p><p>رستوران یک</p></div>
+                        <div class="col-md-4"><span> <img src="~/Resources/Spoon.png" style="width: 60px; height: 60px;" /></span></div>
 
+                    </div>
+
+                </a>
+            </div>
+        </div>
 
         </div>
 
