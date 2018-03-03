@@ -125,9 +125,25 @@
 
 
 
-        <h6> @Model.Count()</h6>
-       
-      
+        <h6 id="hi"> @Model.Count()</h6>
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>   
+@*<script>
+    $(document).ready(function(){
+        $("#hi").hover(function(){
+                (this).hide();
+            },
+            function(){
+              (this).show();
+            }); 
+    });
+</script>*@  
+<style>
+    #hi:hover {display: none
+
+    }
+</style>
 
 
 

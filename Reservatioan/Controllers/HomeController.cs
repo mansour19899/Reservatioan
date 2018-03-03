@@ -41,11 +41,6 @@ namespace Reservatioan.Controllers
 
             var date = naharDate.Concat(shamDate).OrderBy(p => p.date).ToList();
 
-           
-
-            var ttt = date.ElementAt(1);
-
-            
 
             return View(date);
         }
@@ -100,9 +95,70 @@ namespace Reservatioan.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            person_id = 34647;
+            dateNow = "1396/11/11";
+            shift = 4;
+            User user = new User() { PersonId = person_id, Shift = shift, Restuarent = "رستوران یک", Restuarent_fk_id = 26, Name = "سید منصور محمدی" };
+            Session["user"] = user;
 
-            return View();
+            Session["permit"] = true;
+
+            List<datee> naharDate = (from p in GetSheduleShift().AsEnumerable()
+                                     where p.Field<string>("Date").CompareTo(dateNow) == 1 & p.Field<string>("Nahar") == shift.ToString()
+                                     select new datee { date = p.Field<string>("Date"), meal = (int)MealEnum.ناهار, theme = "themeLunch" }).ToList();
+            List<datee> shamDate = (from p in GetSheduleShift().AsEnumerable()
+                                    where p.Field<string>("Date").CompareTo(dateNow) == 1 & p.Field<string>("Sham") == shift.ToString()
+                                    select new datee { date = p.Field<string>("Date"), meal = (int)MealEnum.شام, theme = "themeDinner" }).ToList();
+
+            var date = naharDate.Concat(shamDate).OrderBy(p => p.date).ToList();
+
+
+
+            var ttt = date.ElementAt(1);
+
+
+            string htmldata = "";
+
+
+
+            int itemrowindex = 0;
+
+
+          
+            foreach (var item in date)
+            {
+
+                if (itemrowindex == 0)
+                {
+                    htmldata += "<div class='row'>";
+                }
+
+                htmldata += "<div class='col-md-4  " + item.theme + " '  style='padding: 30px;'>";
+                htmldata += "<div class='colitem'>";
+                htmldata += "<a href = '../Home/ReservePerDay?date=" + item.date + "&meal=" + item.meal + "' >";
+                htmldata += "<div class='col-md-8'>";
+                htmldata += "<p>" + item.date + " </p>";
+                htmldata += "<p>رستوران یک</p>";
+                htmldata += "</div>";
+                htmldata += "<div class='col-md-4'><span> <img src = '/Resources/Spoon.png' style='width: 60px; height: 60px;' /></span></div>";
+                htmldata += "</a>";
+                htmldata += "</div>";
+                htmldata += "</div>";
+
+                itemrowindex++;
+                if (itemrowindex == 3)
+                {
+                    itemrowindex = 0;
+
+                    htmldata += "</div>";
+                }
+            }
+
+            ViewBag.HtmlData = htmldata;
+
+
+
+            return View( date);
         }
 
         private DataTable GetSheduleShift()
@@ -161,12 +217,7 @@ namespace Reservatioan.Controllers
             return table;
         }
 
-        //class myfff
-        //{
-           
-        //    public string date { get; set; }
-        //    public string meal { get; set; }
-        //}
+
 
     }
 }

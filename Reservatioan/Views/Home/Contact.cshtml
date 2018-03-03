@@ -1,17 +1,74 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model IEnumerable<Reservatioan.Models.datee>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div>
+
+
+
+
+
+
+    @Html.Raw(ViewBag.HtmlData)
+    
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <a href="../Home/ReserveAllDay">
+                <div class="row  themeLunch" style=" padding: 30px; ">
+                    <div class="col-md-8"><p>رزروهای تاریخ های غیر شیفت</p><p>رستوران یک</p></div>
+                    <div class="col-md-4"><span> <img src="~/Resources/Spoon.png" style="width: 60px; height: 60px;" /></span></div>
+
+                </div>
+
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+@*<h6 id="hi"> @Model.Count()</h6>*@
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+@*<script>
+        $(document).ready(function(){
+            $("#hi").hover(function(){
+                    (this).hide();
+                },
+                function(){
+                  (this).show();
+                });
+        });
+    </script>*@
+<style>
+    #hi:hover {
+        display: none
+    }
+    .col-md-4{ height: 100%;}
+    .colitem {
+        width: 90%;
+        height: 90%;
+        background-color: red;
+    }
+</style>
+
+
+
