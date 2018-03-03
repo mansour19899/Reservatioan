@@ -58,7 +58,7 @@ namespace Reservatioan.Controllers
         public ActionResult ReservePerDay(string date,int meal)
         {
             var y =(bool) Session["permit"];
-            Session["permit"] = false;
+            Session["permit"] = true;
             if (y)
             {
                 var db = new PoonehEntities4();
