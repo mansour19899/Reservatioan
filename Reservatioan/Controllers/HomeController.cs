@@ -25,8 +25,8 @@ namespace Reservatioan.Controllers
         public ActionResult Index()
         {
             person_id = 34647;
-            dateNow = "1396/11/11";
-            shift = 4;
+            dateNow = "1396/11/01";
+            shift = 1;
             User user = new User() { PersonId = person_id,Shift = shift,Restuarent = "رستوران یک",Restuarent_fk_id = 26,Name = "سید منصور محمدی"};
             Session["user"] = user;
             
@@ -48,11 +48,11 @@ namespace Reservatioan.Controllers
         public ActionResult ReserveAllDay()
         {
             var user = Session["user"] as User;
-            dateNow = "1396/11/11";
+            dateNow = "1396/11/01";
             List<datee> Date = (from p in GetSheduleShift().AsEnumerable()
                 where p.Field<string>("Date").CompareTo(dateNow) == 1
                 select new datee { date = p.Field<string>("Date")}).ToList();
-            return View(Date);
+            return View("temp",Date);
         }
         [HandleError]
         public ActionResult ReservePerDay(string date,int meal)

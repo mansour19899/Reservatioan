@@ -490,6 +490,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ReservePerDay.cshtml" />
     <Content Include="Views\Home\ReserveAllDay.cshtml" />
+    <Content Include="Views\Home\temp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
