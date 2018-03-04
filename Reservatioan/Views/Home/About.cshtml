@@ -4,4 +4,32 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+
+
 <p>Use this area to provide additional information.</p>
+<div class="alert alert-success fade in">
+    رزرو با موفقیت انجام شد
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+</div>
+
+
+
+<div class="pull-left"><img src="~/Resources/Spoon.png" /> </div>
+<div class="pull-right"><img src="~/Resources/Spoon.png"/> </div>
+
+<div class="alert alert-danger alert-dismissible fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+</div>
+
+@*<script>
+    $(document).ready(function() {
+        $(".close").click(function() {
+            $(".alert").alert();
+        });
+    });
+</script>*@
