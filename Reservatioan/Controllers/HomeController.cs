@@ -90,7 +90,7 @@ namespace Reservatioan.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View("test");
         }
 
         public ActionResult Contact()
