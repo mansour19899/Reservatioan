@@ -68,7 +68,6 @@
             $("#alert").on('click', function () {
                 reset();
                 alertify.alert("This is an alert dialog");
-                $(location).attr('href', 'http://stackoverflow.com');
                 return false;
             });
             $("#confirm").on('click', function () {
@@ -78,8 +77,7 @@
                     if (e) {
                         alertify.success("You've clicked OK");
                     } else {
-                        //alertify.error("You've clicked Cancel");
-                        $(location).attr('href', 'Index');
+                        alertify.error("You've clicked Cancel");
                     }
                 });
 
